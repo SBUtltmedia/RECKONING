@@ -7,14 +7,18 @@
         Select image to upload:
         <input type="file" name="fileToUpload" id="fileToUpload">
         <input type="submit" value="Upload Image" name="submit">
+        Enter your title:
+        <input  name="title" id="title">
     </form>
     <?php
-$user=$_SERVER['cn'].rand(1, 9);
+    if (!empty($_POST)){
+$user=$_SERVER['cn'].rand(1, 99999);
 #$user=$_SERVER['cn'];
 $target_dir = "users/$user/";
 if (!file_exists($target_dir)) {
     mkdir($target_dir, 0777, true);
 }
+
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -45,6 +49,7 @@ if(isset($_POST["submit"])) {
     $uploadOk = 0;
   }
 }
+    }
 ?>
 
 

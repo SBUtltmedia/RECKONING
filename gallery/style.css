@@ -1,0 +1,52 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ui-tooltip{
+    background: black;
+    border: .2rem solid white;
+  }
+  .ui-tooltip {
+   
+    padding: 10px 20px;
+    color: white;
+    border-radius: 2%;
+    font: bold .1rem "Helvetica Neue", Sans-Serif;
+    box-shadow: 0 0 .7rem black;
+  }
+.container{
+    position:absolute;
+   border: 1px solid black; 
+   margin:0;
+  
+
+}
+  #largeImagePanel{
+    display: flex;
+   padding:1rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 .7rem black;
+position:absolute;
+top:10%;
+left:10%;
+width:80%;
+height:80%;
+border-radius: 2%;
+border-radius: 2%;
+background-color: antiquewhite;
+z-index:1000;
+  }
+  #imageHolder{
+
+
+  }
+  #largeImage{
+
+  width:95%;
+  }
+  #table{
+ 
+    z-index:1;
+  
+  }
